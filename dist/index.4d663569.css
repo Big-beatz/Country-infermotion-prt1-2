@@ -3,7 +3,7 @@
 }
 
 .yellow-text {
-  color: #ff0;
+  color: #b7b734;
 }
 
 .red-text {
@@ -19,7 +19,55 @@
 }
 
 .orange-text {
-  color: orange;
+  color: #db9e49;
+}
+
+ul {
+  max-height: 8500px;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  list-style: none;
+  display: flex;
+}
+
+li {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px;
+}
+
+header {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+h1 {
+  text-align: center;
+  font-family: Comic Sans MS, sans-serif;
+}
+
+#world-map {
+  max-width: 1200px;
+  flex-grow: 2;
+}
+
+.flag {
+  max-width: 30px;
+}
+
+#countryContainer {
+  height: border-box;
+  background-color: #c2cfb0;
+  border-style: groove;
+  border-color: #d8fb98;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  padding: 10px;
+  font-family: calibri, sans serif;
+  font-size: large;
+  display: flex;
 }
 
 /*# sourceMappingURL=index.4d663569.css.map */

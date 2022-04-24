@@ -18,11 +18,14 @@ async function fetchCountries() {
         //het request maken
         const response = await axios.get('https://restcountries.com/v2/all')
         //test of de data binnenkomt
-        console.log(response)
+        // console.log(response)
 
         //sorteer de array op basis van populatie
         response.data.sort((a, b) => a.population - b.population)
 
+
+        //schrijf een functie die voor elke regio een andere String teruggeeft.
+        //Voeg deze functie toe aan de .map methode om de class te definieren.
         function setColourToCountryName(region) {
             switch (region) {
                 case 'Africa':
@@ -47,11 +50,13 @@ async function fetchCountries() {
 
         // roep alle namen landen met bijbehorende informatie op en push het geheel naar HTML
         const countriesToHTML = response.data.map((countryToHTML) => {
-            return `<li> <img src="${countryToHTML.flags.png}" alt="Flag">
+            return `<li> <img class="flag" src="${countryToHTML.flags.png}" alt="Flag">
                     <span class="${setColourToCountryName(countryToHTML.region)}">${countryToHTML.name}</span>
-                    <p>Has a population of ${countryToHTML.population} people </p> </li>`
+                    <p>Has a population of ${countryToHTML.population} people.</p></li>`
         })
-        countries.innerHTML = countriesToHTML
+
+        //Met join haal ik de komma tussen de verschillende landen weg.
+        countries.innerHTML = countriesToHTML.join("")
 
 
     }catch (e){
