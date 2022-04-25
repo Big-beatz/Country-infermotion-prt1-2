@@ -12,11 +12,6 @@
 .orange-text{color: #db9e49
 }
 
-ul{list-style: none;
-    column-count: 3;
-    column-gap: normal;
-}
-
 header{
     display: flex;
     flex-direction: column;
@@ -33,9 +28,6 @@ h1{
     flex-grow: 2;
 }
 
-.flag{
-    max-width: 30px;
-}
 
 
 #countryContainer{
@@ -46,7 +38,20 @@ h1{
     border-style: groove;
     border-color: #d8fb98;
     border-radius: 10px;
-    /*display: flex;*/
+    display: flex;
     /*flex-wrap: wrap;*/
     /*height: border-box;*/
+}
+
+ul {
+    list-style: none;
+    column-count: 3;
+    display: flex;
+}
+    /*flex-direction: column;*/
+    /*justify-content: space-between;*/
+    /*justify-items: normal}*/
+
+.flag{
+    max-width: 30px;
 }

@@ -22,12 +22,6 @@
   color: #db9e49;
 }
 
-ul {
-  column-count: 3;
-  column-gap: normal;
-  list-style: none;
-}
-
 header {
   flex-direction: column;
   align-items: center;
@@ -44,10 +38,6 @@ h1 {
   flex-grow: 2;
 }
 
-.flag {
-  max-width: 30px;
-}
-
 #countryContainer {
   background-color: #c2cfb0;
   border-style: groove;
@@ -56,6 +46,17 @@ h1 {
   padding: 10px;
   font-family: calibri, sans serif;
   font-size: large;
+  display: flex;
+}
+
+ul {
+  column-count: 3;
+  list-style: none;
+  display: flex;
+}
+
+.flag {
+  max-width: 30px;
 }
 
 /*# sourceMappingURL=index.4d663569.css.map */
