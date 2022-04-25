@@ -13,34 +13,26 @@
 }
 
 ul{list-style: none;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-height: 8500px;
-}
-
-li{
-    padding: 10px;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+    column-count: 3;
+    column-gap: normal;
 }
 
 header{
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
+
 h1{
     font-family: "Comic Sans MS", sans-serif;
-    text-align: center}
+    text-align: center;
+}
 
 #world-map{
     max-width: 1200px;
     flex-grow: 2;
 }
+
 .flag{
     max-width: 30px;
 }
@@ -54,7 +46,7 @@ h1{
     border-style: groove;
     border-color: #d8fb98;
     border-radius: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    height: border-box;
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*height: border-box;*/
 }

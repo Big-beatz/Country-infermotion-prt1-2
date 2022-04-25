@@ -23,18 +23,9 @@
 }
 
 ul {
-  max-height: 8500px;
-  flex-flow: column wrap;
-  justify-content: space-between;
+  column-count: 3;
+  column-gap: normal;
   list-style: none;
-  display: flex;
-}
-
-li {
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  padding: 10px;
 }
 
 header {
@@ -58,16 +49,13 @@ h1 {
 }
 
 #countryContainer {
-  height: border-box;
   background-color: #c2cfb0;
   border-style: groove;
   border-color: #d8fb98;
   border-radius: 10px;
-  flex-wrap: wrap;
   padding: 10px;
   font-family: calibri, sans serif;
   font-size: large;
-  display: flex;
 }
 
 /*# sourceMappingURL=index.4d663569.css.map */
