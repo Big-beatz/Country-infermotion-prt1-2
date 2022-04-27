@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;AAEA;;;;AAEA","sources":["src/zoekpaginaStyles.css"],"sourcesContent":["#wereldbol {max-width: 500px}\r\n\r\n#countryFlag{max-height: 30px}\r\n\r\n#bigName{font-size: x-large}"],"names":[],"version":3,"file":"zoekpagina.5112acb5.css.map","sourceRoot":"/__parcel_source_root/"}

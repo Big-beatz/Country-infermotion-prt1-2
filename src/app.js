@@ -76,8 +76,3 @@ async function fetchCountries() {
 
 //Roep de functie aan
 fetchCountries()
-
-
-
-
-

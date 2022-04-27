@@ -1,17 +1,3 @@
-.green-text{color: green}
-
-.yellow-text{color: #b7b734
-}
-
-.red-text{color: red}
-
-.blue-text{color: blue}
-
-.purple-text{color: purple}
-
-.orange-text{color: #db9e49
-}
-
 header{
     display: flex;
     flex-direction: column;
@@ -28,30 +14,26 @@ h1{
     flex-grow: 2;
 }
 
-
-
-#countryContainer{
-    background-color: #c2cfb0;
-    padding: 10px;
-    font-family: calibri, sans serif;
-    font-size: large;
-    border-style: groove;
-    border-color: #d8fb98;
-    border-radius: 10px;
-    display: flex;
-    /*flex-wrap: wrap;*/
-    /*height: border-box;*/
-}
-
-ul {
-    list-style: none;
+#countries {
+    list-style-type: none;
     column-count: 3;
-    display: flex;
+    max-width: 1000px;
+    border-radius: 4px;
+    border: 1px solid lightgrey;
+    background-color: #FAFAFA;
+    padding: 30px;
 }
-    /*flex-direction: column;*/
-    /*justify-content: space-between;*/
-    /*justify-items: normal}*/
 
-.flag{
-    max-width: 30px;
-}
+.green-text{color: green}
+
+.yellow-text{color: #b7b734}
+
+.red-text{color: red}
+
+.blue-text{color: blue}
+
+.purple-text{color: purple}
+
+.orange-text{color: #db9e49}
+
+.flag{max-width: 30px;}
