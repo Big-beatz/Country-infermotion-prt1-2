@@ -538,16 +538,21 @@ const searchBar = document.getElementById("searchBar");
 const searchCountry = document.getElementById("searchCountry");
 function sendData(event) {
     event.preventDefault();
-    return searchBar.value;
+    fetchOneCountry(searchBar.value);
+    searchBar.value = "";
 }
 searchCountry.addEventListener("submit", sendData);
 // currency, language
-async function fetchOneCountry() {
+async function fetchOneCountry(name) {
+    // zorg ervoor dat er iedere keer bij een nieuwe zoekopdracht het (mogelijke) oude resultaat word verwijderd
+    searchResult.innerHTML = "";
+    errorMessage.innerHTML = "";
     try {
         //1. Haal de informatie per land op via de REST countries API (begin met 1 land om te testen)
-        const oneCountry = await _axiosDefault.default.get('https://restcountries.com/v2/name/' + searchBar.value);
+        const oneCountry = await _axiosDefault.default.get(`https://restcountries.com/v2/name/${name}`);
         //destructure for future reference
         const { name: countryName , capital , subregion , population , flag , currencies , languages  } = oneCountry.data[0];
+        console.log(countryName);
         // const {name: currencyName} = oneCountry.data[0].currencies[0]
         // const {name: language} = oneCountry.data[0].languages[0]
         // console.log(oneCountry)
@@ -561,15 +566,14 @@ async function fetchOneCountry() {
                                   <p>${countryName} is situated in ${subregion}. It has a population of ${population} people.</p>
                                   <p>The capital is ${capital} and you can pay with ${currencies[0].name}'s and ${currencies[1].name}'s</p>`;
     } catch (e) {
-        if (e.response.status === 404) errorMessage.innerText = "We couldn't find what you were looking for, please check your spelling";
-        else if (e.response.status === 500) errorMessage.innerText = "Something went wrong with the server, please try again later";
+        console.error(e);
+        console.log(e.response);
+        errorMessage.innerHTML = `<p class="errorMessage">${name} doesn't exist. Please try again.</p>`;
     }
-}
-fetchOneCountry() //5. Schrijf een if else statement of er sprake is van 1 of meerdere valuta's.
+} //5. Schrijf een if else statement of er sprake is van 1 of meerdere valuta's.
  // Maak een anker voor de zoekbalk
  // zet eventlisteners op die aflezen wat de gebruiker invoert
  // zorg dat de juiste informatie teruggegeven word
-;
 
 },{"axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jo6P5":[function(require,module,exports) {
 module.exports = require('./lib/axios');
